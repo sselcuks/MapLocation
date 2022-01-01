@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0835B02888C360CF38FA78 /* Pods_VoltLinesCaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCED35BD528B757D5C1A698 /* Pods_VoltLinesCaseProject.framework */; };
+		EA4221C62781011B00879116 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4221C52781011B00879116 /* Model.swift */; };
+		EA4221C82781025300879116 /* MapAnnotationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4221C72781025300879116 /* MapAnnotationPresenter.swift */; };
 		EA9213EB277B4A2F002AD575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9213EA277B4A2F002AD575 /* AppDelegate.swift */; };
 		EA9213ED277B4A2F002AD575 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9213EC277B4A2F002AD575 /* SceneDelegate.swift */; };
-		EA9213EF277B4A2F002AD575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9213EE277B4A2F002AD575 /* ViewController.swift */; };
+		EA9213EF277B4A2F002AD575 /* MapAnnotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9213EE277B4A2F002AD575 /* MapAnnotationController.swift */; };
 		EA9213F2277B4A2F002AD575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9213F0277B4A2F002AD575 /* Main.storyboard */; };
 		EA9213F4277B4A31002AD575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9213F3277B4A31002AD575 /* Assets.xcassets */; };
 		EA9213F7277B4A31002AD575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9213F5277B4A31002AD575 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FCED35BD528B757D5C1A698 /* Pods_VoltLinesCaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoltLinesCaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5906C7E6DCE407E42C8EFD0B /* Pods-VoltLinesCaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltLinesCaseProject.debug.xcconfig"; path = "Target Support Files/Pods-VoltLinesCaseProject/Pods-VoltLinesCaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		A0BF391205AB524F227E7B79 /* Pods-VoltLinesCaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltLinesCaseProject.release.xcconfig"; path = "Target Support Files/Pods-VoltLinesCaseProject/Pods-VoltLinesCaseProject.release.xcconfig"; sourceTree = "<group>"; };
+		EA4221C52781011B00879116 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EA4221C72781025300879116 /* MapAnnotationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationPresenter.swift; sourceTree = "<group>"; };
 		EA9213E7277B4A2F002AD575 /* VoltLinesCaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoltLinesCaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9213EA277B4A2F002AD575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9213EC277B4A2F002AD575 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA9213EE277B4A2F002AD575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA9213EE277B4A2F002AD575 /* MapAnnotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationController.swift; sourceTree = "<group>"; };
 		EA9213F1277B4A2F002AD575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA9213F3277B4A31002AD575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9213F6277B4A31002AD575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,17 +39,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0835B02888C360CF38FA78 /* Pods_VoltLinesCaseProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55F28DAB340EB501C41FA121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FCED35BD528B757D5C1A698 /* Pods_VoltLinesCaseProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF2F971D7F0AC0CFF0F67345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5906C7E6DCE407E42C8EFD0B /* Pods-VoltLinesCaseProject.debug.xcconfig */,
+				A0BF391205AB524F227E7B79 /* Pods-VoltLinesCaseProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EA4221C12781009C00879116 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA4221C52781011B00879116 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EA4221C2278100A700879116 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EA4221C72781025300879116 /* MapAnnotationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EA4221C3278100AB00879116 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA9213EE277B4A2F002AD575 /* MapAnnotationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA4221C4278100C300879116 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA9213EA277B4A2F002AD575 /* AppDelegate.swift */,
+				EA9213EC277B4A2F002AD575 /* SceneDelegate.swift */,
+				EA9213F3277B4A31002AD575 /* Assets.xcassets */,
+				EA9213F5277B4A31002AD575 /* LaunchScreen.storyboard */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		EA9213DE277B4A2F002AD575 = {
 			isa = PBXGroup;
 			children = (
 				EA9213E9277B4A2F002AD575 /* VoltLinesCaseProject */,
 				EA9213E8277B4A2F002AD575 /* Products */,
+				CF2F971D7F0AC0CFF0F67345 /* Pods */,
+				55F28DAB340EB501C41FA121 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +119,11 @@
 		EA9213E9277B4A2F002AD575 /* VoltLinesCaseProject */ = {
 			isa = PBXGroup;
 			children = (
-				EA9213EA277B4A2F002AD575 /* AppDelegate.swift */,
-				EA9213EC277B4A2F002AD575 /* SceneDelegate.swift */,
-				EA9213EE277B4A2F002AD575 /* ViewController.swift */,
+				EA4221C4278100C300879116 /* Helpers */,
+				EA4221C12781009C00879116 /* Model */,
+				EA4221C3278100AB00879116 /* View */,
+				EA4221C2278100A700879116 /* Presenter */,
 				EA9213F0277B4A2F002AD575 /* Main.storyboard */,
-				EA9213F3277B4A31002AD575 /* Assets.xcassets */,
-				EA9213F5277B4A31002AD575 /* LaunchScreen.storyboard */,
 				EA9213F8277B4A31002AD575 /* Info.plist */,
 			);
 			path = VoltLinesCaseProject;
@@ -74,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA9213FB277B4A31002AD575 /* Build configuration list for PBXNativeTarget "VoltLinesCaseProject" */;
 			buildPhases = (
+				A3BB510DB29BE75D520A9E19 /* [CP] Check Pods Manifest.lock */,
 				EA9213E3277B4A2F002AD575 /* Sources */,
 				EA9213E4277B4A2F002AD575 /* Frameworks */,
 				EA9213E5277B4A2F002AD575 /* Resources */,
+				8D9E53F71DD522BCAB4055BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +197,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D9E53F71DD522BCAB4055BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoltLinesCaseProject/Pods-VoltLinesCaseProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoltLinesCaseProject/Pods-VoltLinesCaseProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VoltLinesCaseProject/Pods-VoltLinesCaseProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3BB510DB29BE75D520A9E19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoltLinesCaseProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA9213E3277B4A2F002AD575 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA9213EF277B4A2F002AD575 /* ViewController.swift in Sources */,
+				EA9213EF277B4A2F002AD575 /* MapAnnotationController.swift in Sources */,
+				EA4221C82781025300879116 /* MapAnnotationPresenter.swift in Sources */,
 				EA9213EB277B4A2F002AD575 /* AppDelegate.swift in Sources */,
 				EA9213ED277B4A2F002AD575 /* SceneDelegate.swift in Sources */,
+				EA4221C62781011B00879116 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +392,7 @@
 		};
 		EA9213FC277B4A31002AD575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5906C7E6DCE407E42C8EFD0B /* Pods-VoltLinesCaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +420,7 @@
 		};
 		EA9213FD277B4A31002AD575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0BF391205AB524F227E7B79 /* Pods-VoltLinesCaseProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

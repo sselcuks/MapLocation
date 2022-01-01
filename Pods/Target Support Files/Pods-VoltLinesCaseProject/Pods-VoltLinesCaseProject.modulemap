@@ -1,0 +1,6 @@
+framework module Pods_VoltLinesCaseProject {
+  umbrella header "Pods-VoltLinesCaseProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
