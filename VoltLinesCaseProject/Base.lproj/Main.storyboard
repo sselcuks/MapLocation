@@ -11,14 +11,28 @@
         <!--Map Annotation Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapAnnotationController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapAnnotationController" customModule="VoltLinesCaseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gqH-6v-4Ca">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gqH-6v-4Ca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nbc-3m-SYX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gqH-6v-4Ca" secondAttribute="bottom" id="NoG-Vu-Whr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqH-6v-4Ca" secondAttribute="trailing" id="O0W-Jg-KPm"/>
+                            <constraint firstItem="gqH-6v-4Ca" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dLD-K3-FTV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W1H-Tv-r3R"/>
+                    <connections>
+                        <outlet property="mapView" destination="gqH-6v-4Ca" id="YAb-c4-dhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

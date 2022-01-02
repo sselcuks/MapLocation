@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 import MapKit
 import Alamofire
-protocol MapAnnotationDelegate: AnyObject{
+
+protocol MapLocationDelegate: AnyObject{
     func presentAnnotation(location: [Location])
     func presentAlert(title: String, message:String)
 }
 
+typealias PresenterDelegate =  MapLocationDelegate & UIViewController
 
 enum LOCATION:String{
     case GET = "stations"
@@ -25,25 +27,26 @@ enum LOCATION:String{
 }
 
 
-class MapAnnotation{
-    weak var delegate: MapAnnotationDelegate?
+class MapPointLocation{
+    weak var delegate: MapLocationDelegate?
     
-    public func getLocation(onSuccess: @escaping ([Location]) -> Void, onError: @escaping (String?) -> Void){
+    public func getLocation(){
         
         AF.request(LOCATION.GET.baseURL(), method: .get).validate().responseDecodable(of: [Location].self){
             (response) in
 
-            guard let result = response.value else{
-                onError(response.debugDescription)
+            guard let location = response.value else{
+                print("error")
                 return
             }
-            onSuccess(result)
+          
+            self.delegate?.presentAnnotation(location: location)
         }
         
     }
     
-    
-    public func setAnnotationDelegate(delegate: MapAnnotationDelegate){
+
+    public func setAnnotationDelegate(delegate: MapLocationDelegate){
         self.delegate = delegate
     }
 }
