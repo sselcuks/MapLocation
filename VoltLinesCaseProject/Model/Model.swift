@@ -16,7 +16,6 @@ struct Location: Codable {
     let tripsCount: Int
 
     enum CodingKeys: String, CodingKey {
-        //case centerCoordinates = centerCoordinates.components(separatedBy: ",")
         case centerCoordinates = "center_coordinates"
         case id, name, trips
         case tripsCount = "trips_count"

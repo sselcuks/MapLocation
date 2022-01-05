@@ -10,6 +10,10 @@
 		9B0835B02888C360CF38FA78 /* Pods_VoltLinesCaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCED35BD528B757D5C1A698 /* Pods_VoltLinesCaseProject.framework */; };
 		EA4221C62781011B00879116 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4221C52781011B00879116 /* Model.swift */; };
 		EA4221C82781025300879116 /* MapAnnotationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4221C72781025300879116 /* MapAnnotationPresenter.swift */; };
+		EA4221CA2781D9F700879116 /* TripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4221C92781D9F600879116 /* TripListTableViewController.swift */; };
+		EA4221CD278201A300879116 /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4221CB278201A300879116 /* TripCell.swift */; };
+		EA4221CE278201A300879116 /* TripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4221CC278201A300879116 /* TripCell.xib */; };
+		EA4221D12782657100879116 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4221D02782657000879116 /* NetworkManager.swift */; };
 		EA9213EB277B4A2F002AD575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9213EA277B4A2F002AD575 /* AppDelegate.swift */; };
 		EA9213ED277B4A2F002AD575 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9213EC277B4A2F002AD575 /* SceneDelegate.swift */; };
 		EA9213EF277B4A2F002AD575 /* MapAnnotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9213EE277B4A2F002AD575 /* MapAnnotationController.swift */; };
@@ -24,6 +28,10 @@
 		A0BF391205AB524F227E7B79 /* Pods-VoltLinesCaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoltLinesCaseProject.release.xcconfig"; path = "Target Support Files/Pods-VoltLinesCaseProject/Pods-VoltLinesCaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		EA4221C52781011B00879116 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EA4221C72781025300879116 /* MapAnnotationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationPresenter.swift; sourceTree = "<group>"; };
+		EA4221C92781D9F600879116 /* TripListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewController.swift; sourceTree = "<group>"; };
+		EA4221CB278201A300879116 /* TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
+		EA4221CC278201A300879116 /* TripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripCell.xib; sourceTree = "<group>"; };
+		EA4221D02782657000879116 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EA9213E7277B4A2F002AD575 /* VoltLinesCaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoltLinesCaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9213EA277B4A2F002AD575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA9213EC277B4A2F002AD575 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +90,9 @@
 		EA4221C3278100AB00879116 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA4221D22783030300879116 /* Xib */,
 				EA9213EE277B4A2F002AD575 /* MapAnnotationController.swift */,
+				EA4221C92781D9F600879116 /* TripListTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +106,23 @@
 				EA9213F5277B4A31002AD575 /* LaunchScreen.storyboard */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EA4221CF2782655600879116 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EA4221D02782657000879116 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EA4221D22783030300879116 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EA4221CB278201A300879116 /* TripCell.swift */,
+				EA4221CC278201A300879116 /* TripCell.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		EA9213DE277B4A2F002AD575 = {
@@ -119,6 +146,7 @@
 		EA9213E9277B4A2F002AD575 /* VoltLinesCaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				EA4221CF2782655600879116 /* Network */,
 				EA4221C4278100C300879116 /* Helpers */,
 				EA4221C12781009C00879116 /* Model */,
 				EA4221C3278100AB00879116 /* View */,
@@ -189,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4221CE278201A300879116 /* TripCell.xib in Resources */,
 				EA9213F7277B4A31002AD575 /* LaunchScreen.storyboard in Resources */,
 				EA9213F4277B4A31002AD575 /* Assets.xcassets in Resources */,
 				EA9213F2277B4A2F002AD575 /* Main.storyboard in Resources */,
@@ -244,11 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA4221CA2781D9F700879116 /* TripListTableViewController.swift in Sources */,
 				EA9213EF277B4A2F002AD575 /* MapAnnotationController.swift in Sources */,
 				EA4221C82781025300879116 /* MapAnnotationPresenter.swift in Sources */,
 				EA9213EB277B4A2F002AD575 /* AppDelegate.swift in Sources */,
+				EA4221D12782657100879116 /* NetworkManager.swift in Sources */,
 				EA9213ED277B4A2F002AD575 /* SceneDelegate.swift in Sources */,
 				EA4221C62781011B00879116 /* Model.swift in Sources */,
+				EA4221CD278201A300879116 /* TripCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

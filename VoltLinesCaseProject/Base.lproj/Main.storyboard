@@ -17,26 +17,85 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gqH-6v-4Ca">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HK8-F7-Eo0">
+                                <rect key="frame" x="43" y="787" width="328" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="1Wp-pd-c9Z"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="rDj-7m-dVI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tripDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sQg-Rc-iSn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gqH-6v-4Ca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nbc-3m-SYX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gqH-6v-4Ca" secondAttribute="bottom" id="NoG-Vu-Whr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gqH-6v-4Ca" secondAttribute="trailing" id="O0W-Jg-KPm"/>
-                            <constraint firstItem="gqH-6v-4Ca" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dLD-K3-FTV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HK8-F7-Eo0" secondAttribute="bottom" constant="28" id="19C-TH-xAy"/>
+                            <constraint firstItem="gqH-6v-4Ca" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3pf-FF-LFx"/>
+                            <constraint firstItem="gqH-6v-4Ca" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4NL-bY-Tq2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HK8-F7-Eo0" secondAttribute="trailing" constant="43" id="YcE-Nw-BT1"/>
+                            <constraint firstItem="gqH-6v-4Ca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="buD-2r-NvT"/>
+                            <constraint firstItem="HK8-F7-Eo0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="43" id="nZM-uA-py4"/>
+                            <constraint firstAttribute="bottom" secondItem="gqH-6v-4Ca" secondAttribute="bottom" id="rCx-3o-wIB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W1H-Tv-r3R"/>
                     <connections>
+                        <outlet property="listTrips" destination="HK8-F7-Eo0" id="ORp-ku-Ub9"/>
                         <outlet property="mapView" destination="gqH-6v-4Ca" id="YAb-c4-dhP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="966.66666666666674" y="100.44642857142857"/>
+        </scene>
+        <!--Trip List Table View Controller-->
+        <scene sceneID="5Wv-kQ-aMd">
+            <objects>
+                <viewController storyboardIdentifier="TripListTableViewController" id="1Qh-Qd-uZi" customClass="TripListTableViewController" customModule="VoltLinesCaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iq4-Aq-X3b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oz5-hQ-fNi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TripCell" id="iAS-av-WL9" customClass="TripCell" customModule="VoltLinesCaseProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iAS-av-WL9" id="Qq2-G4-Oad">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j6D-Jb-PdB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oz5-hQ-fNi" firstAttribute="leading" secondItem="j6D-Jb-PdB" secondAttribute="leading" id="J4R-Uu-Id1"/>
+                            <constraint firstItem="Oz5-hQ-fNi" firstAttribute="top" secondItem="j6D-Jb-PdB" secondAttribute="top" id="Owf-KZ-nIc"/>
+                            <constraint firstAttribute="bottom" secondItem="Oz5-hQ-fNi" secondAttribute="bottom" id="oWl-Dl-Vj0"/>
+                            <constraint firstItem="Oz5-hQ-fNi" firstAttribute="trailing" secondItem="j6D-Jb-PdB" secondAttribute="trailing" id="wyN-Hb-yJf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G99-cm-Yen"/>
+                    <connections>
+                        <outlet property="tripListTableView" destination="Oz5-hQ-fNi" id="yQ9-lF-yKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlB-Bt-tB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2766.666666666667" y="105.80357142857143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HsO-yi-6EF">
@@ -55,6 +114,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMA-wK-fd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="56.521739130434788" y="100.44642857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ikw-t7-qqu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QE6-xB-FRc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vcn-DC-ero">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1Qh-Qd-uZi" kind="relationship" relationship="rootViewController" id="axA-By-GZi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQ1-D1-HxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1856.521739130435" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>
